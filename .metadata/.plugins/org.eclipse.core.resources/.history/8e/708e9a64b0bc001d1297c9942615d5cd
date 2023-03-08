@@ -1,0 +1,16 @@
+package com.mbelDev.utils;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
+
+public class CookieManager {
+	public static void makeCookie(HttpServletResponse response, 
+									String _cookieName,
+									String _cookieValue, 
+									int _cookieMaxAge) {
+		Cookie cookie = new Cookie(_cookieName,_cookieValue);
+		cookie.setMaxAge(_cookieMaxAge);
+		cookie.setPath("/");
+		response.addCookie(cookie);
+	}
+}

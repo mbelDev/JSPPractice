@@ -1,0 +1,79 @@
+<%@page import="com.mbelDev.utils.UserChecker"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@include file = "./include/header.jsp" %>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	<main class="main">
+		<div class="container">
+			<form action="join_process.jsp" method="POST">
+				<table>
+					<colgroup>
+						<col style="width: 20%">
+						<col style="width: 80%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>아이디</th>
+							<td><input type="text" name="userID" id="userID"
+								placeholder="아이디를 입력 해 주세요.">
+								<button class="btn idChecker">아이디 중복 확인</button>
+								</td>
+			
+						</tr>
+						<tr>
+							<th>비밀번호</th>
+							<td><input type="password" name="userPW" id="userPW"
+								placeholder="비밀번호를 입력 해 주세요."></td>
+						</tr>
+						<tr>
+							<th>비밀번호 확인</th>
+							<td><input type="password" name="userPWconfirm"
+								id="userPWconfirm" placeholder="비밀번호를 한번 더 입력 해 주세요."></td>
+						</tr>
+						<tr>
+							<th>이름</th>
+							<td><input type="text" name="userNM" id="userNM"
+								placeholder="이름을 입력 해 주세요."></td>
+						</tr>
+						<tr>
+							<th>메일</th>
+							<td><input type="text" name="userEM" id="userEM"
+								placeholder="메일 주소를 입력 해 주세요."></td>
+						</tr>
+						<tr>
+							<th>연락처</th>
+							<td><input type="text" name="userHP" id="userHP"
+								placeholder="전화번호를 입력 해 주세요."></td>
+						</tr>
+						<tr>
+							<th>주소</th>
+							<td>
+								<div>
+									<input type="text" name="userZIP" id="userZIP"
+										placeholder="주소를 입력 해 주세요." readonly>
+									<button class="btn ZIPCODE">우편번호</button>
+								</div>
+								<div>
+									<input type="text" name="userAD01" id="userAD01"
+										placeholder="주소를 입력 해 주세요." readonly> <span>기본주소</span>
+								</div>
+								<div>
+									<input type="text" name="userAD02" id="userAD02"
+										placeholder="주소를 입력 해 주세요.">
+									<input type="text" name="userAD03" id="userAD03"
+										placeholder="참고사항.">
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div>
+					<button class="btn confirm">회원가입</button>
+					<button type="reset">취소</button>
+				</div>
+			</form>
+		</div>
+
+	</main>
+
+<%@ include file="./include/footer.jsp" %>

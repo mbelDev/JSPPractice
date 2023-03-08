@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	//데이터 수신
+	String userNM = request.getParameter("userNM");
+	String subject = request.getParameter("subject");
+	String userPW = request.getParameter("userPW");
+	String contents = request.getParameter("contents");
+
+	//DB에 연결
+	SqlConnect.connect();
+%>

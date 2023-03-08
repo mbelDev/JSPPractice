@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cleaner, we want you!!</title>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<h1 class="header_logo">Wellcome to my WORLD AGENTS!!</h1>
+			<nav class="gnb">
+				<h2 class="hidden"></h2>
+				<ul class="list">
+					<li><a href="./login_by_url_jsp.jsp">회원가입</a></li>
+					<li><a href="./login_by_url_jsp.jsp">로그인</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>

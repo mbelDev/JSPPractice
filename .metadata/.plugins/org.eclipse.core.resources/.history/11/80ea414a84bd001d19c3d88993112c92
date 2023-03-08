@@ -1,0 +1,18 @@
+.header{
+    background:#4e4e4e;
+    color: #fff;
+    li{
+        list-style-type: none;
+    }
+    .header-center{
+        display: block;
+        width: 1200px;
+        margin: 0px auto;
+        &__gnb{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

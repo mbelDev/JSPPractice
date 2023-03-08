@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+String userID = request.getParameter("userID");
+String userPW = request.getParameter("userPW");
+String userNM = request.getParameter("userNM");
+String userEM = request.getParameter("userEM");
+String userHP = request.getParameter("userHP");
+int userZIP = Integer.parseInt(request.getParameter("userZIP"));
+String userAD01 = request.getParameter("userAD01");
+String userAD02 = request.getParameter("userAD02");
+String userAD03 = request.getParameter("userAD03");
+
+%>

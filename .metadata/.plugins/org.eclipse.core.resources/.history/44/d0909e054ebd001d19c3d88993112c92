@@ -1,0 +1,8 @@
+<%@page import="com.mbelDev.utils.UserChecker"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	String userID = (String)request.getParameter("userID");
+	UserChecker.idChecker(response,userID){
+	}
+%>
