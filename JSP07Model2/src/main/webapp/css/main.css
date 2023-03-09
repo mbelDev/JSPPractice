@@ -1,3 +1,27 @@
+section {
+  height: 800px;
+}
+
+.sub_title {
+  color: #fff;
+}
+
+.title-left {
+  position: absolute;
+  font-size: 4em;
+  left: 1em;
+  bottom: 1em;
+  text-shadow: 12px 10px 5px black;
+}
+
+.title-right {
+  position: absolute;
+  font-size: 4em;
+  right: 1em;
+  bottom: 1em;
+  text-shadow: -12px 10px 5px black;
+}
+
 .main-visual {
   width: 100%;
   height: 400px;
@@ -30,7 +54,11 @@
 }
 .main-intro .col-lg-12 {
   width: 100%;
-  height: auto;
+  position: relative;
+}
+.main-intro .intro-visual {
+  width: 100%;
+  height: 600px;
   background-image: url("../images/Cleaners_TD2.png");
 }
 
@@ -39,6 +67,10 @@
 }
 .main-contact .col-lg-12 {
   width: 100%;
-  height: auto;
+  position: relative;
+}
+.main-contact .contact-visual {
+  width: 100%;
+  height: 600px;
   background-image: url("../images/big-cleaner.jpg");
 }
