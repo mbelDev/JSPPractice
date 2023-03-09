@@ -1,30 +1,14 @@
-<<<<<<< HEAD
 INDEX VERSION 1.4+C:\VSCode\Kwon\JSPPractice\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 2100626513.index
-596881705.index
-224391390.index
-1496693770.index
 3813773810.index
+1496693770.index
+2863620882.index
+224391390.index
 2470143357.index
+3982016911.index
 2052636744.index
 2204666235.index
 1917123693.index
 3485632866.index
 3829159403.index
-=======
-INDEX VERSION 1.4+C:\Users\user\Desktop\2023K_Move\JSPlecture\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2748922236.index
-2100626513.index
-3679722729.index
-3829159403.index
-2470143357.index
 746853743.index
-571707023.index
-2052636744.index
-224391390.index
-3813773810.index
-1382799615.index
-3982016911.index
-1542160871.index
-746853743.index
->>>>>>> e6c92a2f1cbe6272c44ed1aedd66b4d7855ecf88

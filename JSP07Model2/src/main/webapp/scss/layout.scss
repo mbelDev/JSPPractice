@@ -1,64 +1,190 @@
-.header{
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 60px;
-    background:#4e4e4e;
+.logo-header {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+  .logo-img-header {
+    width: 65px;
+    height: 65px;
+    margin: 0px auto;
+    background-image: url(../images/Cleaners_Logo.png);
+    background-size: cover;
+    background-position-x: 50%;
+  }
+  .logo-text-header {
+    font-size: 1.5em;
+    width: 190px;
+    height: 65px;
+    padding: 6px;
+  }
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 65px;
+  background: #4e4e4e;
+  color: #fff;
+  z-index: 99;
+  li {
+    list-style-type: none;
+  }
+  .header-left {
+    position: absolute;
+    left: 2em;
     color: #fff;
-    z-index: 99;
-    li{
-        list-style-type: none;
+    &__logo {
+      display: block;
+      height: 100%;
+      margin: 0px;
     }
-    .header-left{
-        position: absolute;
-        left: 2em;
-        color: #fff;
-        &__logo{
-            display: block;
-            height: 100%;
-            margin: 0px auto;
-        }
-    }
-    .header-center{
-        display: block;
-        width: 1200px;
-        margin: 0px auto;
-        &__gnb{
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-    }
-    .header-right{
-        position: absolute;
-        color: #fff;
-        top:0px;
-        right: 20px;
-        height:100%;
-    }
-}
-
-.main{
+  }
+  .header-center {
+    display: block;
+    width: 900px;
+    height: 100%;
+    margin: 0px auto;
     position: relative;
-    top: 60px;
-}
-
-.footer{
-
-}
-
-.container{
+    top: 0px;
+    &__gnb {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      text-align: center;
+    }
+    &__gnb-mainmenu {
+      font-size: 1em;
+      list-style-type: none;
+      display: block;
+      margin: auto;
+      a {
+      }
+    }
+  }
+  .header-right {
+    position: absolute;
+    color: #fff;
+    top: 0px;
+    right: 20px;
+    height: 100%;
+    .btn-header {
+      height: 100%;
+      display: inline-block;
+      padding: 20px;
+      &-left {
+        background: #e61;
+      }
+      &-right {
+        background: #4e4e4e;
+      }
+    }
+  }
+  .container {
     display: block;
     width: 1200px;
-<<<<<<<< HEAD:.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/JSP06/scss/layout.scss
-========
+    height: auto;
+  }
 }
 
-a{
-    text-decoration: none;
->>>>>>>> e6c92a2f1cbe6272c44ed1aedd66b4d7855ecf88:JSP07Model2/src/main/webapp/scss/layout.scss
+.main {
+  position: relative;
+  top: 60px;
+}
+
+.footer {
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  border-top: 1px solid #eee;
+  background: #fff;
+  &__inner {
+    position: relative;
+    position: relative;
+    margin: 0 auto;
+    padding: 10px 80px 50px;
+    max-width: 1640px;
+    &__area-info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      height: 90px;
+      position: relative;
+      h1 {
+        display: inline-block;
+        width: 98px;
+        height: 38px;
+        font-size: 0;
+        background: url(../images/Cleaners_Logo.png) no-repeat 0 center / 98px
+          98px;
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 70px;
+        li {
+          padding: 0 20px;
+          font-size: 15px;
+          color: #000;
+        }
+      }
+    }
+    &__family-site {
+      .family-site {
+        width: 180px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -20px;
+        padding: 0 10px;
+        border: 1px solid #cccccc;
+      }
+    }
+    &__area-location {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      p {
+        font-size: 14px;
+        color: rgba(128, 128, 128, 1);
+      }
+      span {
+        display: inline-block;
+        position: relative;
+        padding-left: 60px;
+        font-size: 13px;
+        color: rgba(153, 153, 153, 1);
+        &:before {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          top: -9px;
+          left: 0;
+          background: url(../img/icon_isms.png) no-repeat center / 50px 50px;
+          content: "";
+        }
+      }
+    }
+  }
+}
+.container {
+  display: block;
+  width: 1200px;
+  height: 800px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
