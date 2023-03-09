@@ -6,8 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="get"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="toString"/>
+			<item value="&lt;servlet-mapping&gt;"/>
+			<item value="3.6.3"/>
+			<item value="                        &lt;th&gt;이름&lt;/th&gt;"/>
 			<item value="che"/>
 			<item value="get"/>
 		</list>
