@@ -1,9 +1,0 @@
-INDEX VERSION 1.131
-C:\VSCode\Kwon\JSPPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\454617849.index
-\JSP07Model2\src\main\java
-C:\VSCode\Kwon\JSPPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3933807405.index
-\JSP07Model2\src\main\java
-C:\VSCode\Kwon\JSPPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\746853743.index
-\JSP07Model2\src\main\java
-C:\VSCode\Kwon\JSPPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3474415127.index
-\JSP07Model2\src\main\java
