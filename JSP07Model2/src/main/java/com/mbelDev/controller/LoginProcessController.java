@@ -19,16 +19,17 @@ public class LoginProcessController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     public LoginProcessController() {
         super();
+        System.out.println("일단 실행은 됨");
     }
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		String userID = request.getParameter("userID");
 		String userPW = request.getParameter("userPW");
 		MemberDao memberDao = new MemberDao();
-		MemberDto memberDto = new MemberDto();
+		//MemberDto memberDto = new MemberDto();
 		MemberDto loggedInfo = new MemberDto();
-		memberDto.setUserID(userID);
-		memberDto.setUserPW(userPW);
+		//memberDto.setUserID(userID);
+		//memberDto.setUserPW(userPW);
 		loggedInfo = memberDao.getLoggedMemberInfo(userID, userPW);
 		
 		if (loggedInfo != null) {

@@ -171,6 +171,7 @@
                 $('userPWconfirm').focuse();
 			return false;
 			}
+			return false;
 		});       
 
 	</script>

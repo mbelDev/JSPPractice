@@ -20,9 +20,10 @@ public class LogoutController extends HttpServlet {
     }
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("test");
 		String goodbye="테스트";
 		HttpSession session = request.getSession();
+		MemberDto memberDto = (MemberDto)session.getAttribute("loggedInfo");
+		goodbye = memberDto.getUserNM();
 		session.removeAttribute("loggedInfo");
 		System.out.println("제거됨");
 		ScriptWriter.alert(response, goodbye+"님! 안녕히 가십시오!","../main/mainpage");
