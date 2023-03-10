@@ -12,4 +12,3 @@ INDEX VERSION 1.4+C:\Users\user\Desktop\2023K_Move\JSPlecture\.metadata\.plugins
 1382799615.index
 3982016911.index
 1542160871.index
-746853743.index
