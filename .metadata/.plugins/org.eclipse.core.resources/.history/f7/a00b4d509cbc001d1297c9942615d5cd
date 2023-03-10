@@ -1,8 +1,0 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%
-	
-	String oneday = request.getParameter("oneday");
-	System.out.println(oneday);
-	out.println("FIRE2");		
-%>
