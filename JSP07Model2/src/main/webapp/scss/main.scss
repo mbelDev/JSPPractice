@@ -1,71 +1,286 @@
-section{
-    height: 800px;
+section {
+  height: 800px;
 }
-.sub_title{
-    color:#fff;
+.sub_title {
+  color: #fff;
 }
-.title-left{
-    position: absolute;
-    font-size: 4em;
-    left: 1em;
-    bottom: 1em;
-    text-shadow: 12px 10px 5px black;
+.title-left {
+  position: absolute;
+  font-size: 4em;
+  left: 1em;
+  bottom: 1em;
+  text-shadow: 12px 10px 5px black;
 }
-.title-right{
-    position: absolute;
-    font-size: 4em;
-    right: 1em;
-    bottom: 1em;
-    text-shadow: -12px 10px 5px black;
+.title-right {
+  position: absolute;
+  font-size: 4em;
+  right: 1em;
+  bottom: 1em;
+  text-shadow: -12px 10px 5px black;
 }
 
-.main-visual{
+.main-visual {
+  width: 100%;
+  height: 600px;
+  // background-image: url("../images/Cleaners.gif");
+  // background-size: cover;
+  .container {
+    display: flex;
     width: 100%;
-    height: 400px;
-    background-image: url("../images/Cleaners.gif");
+    height: 100%;
+    margin: 0px auto;
+    justify-content: center;
+  }
+  .swiper-slide {
+    .title-visual {
+      position: absolute;
+      top: 18rem;
+      right: 10rem;
+      margin: 0px auto;
+      font-size: 4em;
+      color: #fff;
+    }
+    .desc-visual {
+      position: absolute;
+      top: 24rem;
+      width: 600px;
+      right: 10rem;
+      margin: 0px auto;
+      font-size: 2em;
+      color: #fff;
+    }
+    .img-visual {
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      background: linear-gradient(
+        to top,
+        #000000 40%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
+  .pagination-visual {
+    color: #fff;
+    position: absolute;
+    bottom: 3rem;
+  }
+}
+
+.main-subTitle {
+  height: 300px;
+}
+
+.main-intro {
+  width: 100%;
+  display: block;
+  .intro-visual {
+    width: 100%;
+    height: 600px;
+    background-image: url("../images/cleaners-work.jpg");
     background-size: cover;
-    .container{
-        display: flex;
-        width: 1200px;
-        margin: 0px auto;
-        justify-content: center;
+    background-attachment: fixed;
+  }
+  .contents-intro {
+    width: 600px;
+    margin: 0px auto;
+    padding: 20rem 0 0;
+    .title-intro {
+      font-size: 3rem;
+      color: #fff;
     }
-    .title{
+    .desc-intro {
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
+}
+.main-work {
+  .work-thumnail {
+    display: block;
+    position: relative;
+    background: #eee;
+    padding: 2rem 1.5rem;
+    height: 480px;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 0.75rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 300ms;
+    &:hover > .more {
+      transform: rotate(90deg);
+      transition: all 300ms;
+    }
+    &:hover > .image > img {
+      object-position: 25% 50%;
+      transition: all 500ms;
+    }
+    &::after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0);
+      width: 100%;
+      height: 100%;
+      transition: all 300ms;
+      content: " ";
+    }
+    &:hover::after {
+      background: rgba(0, 0, 0, 0.4);
+      transition: all 300ms;
+      content: " ";
+    }
+    h2 {
+      position: relative;
+      z-index: 99;
+      margin-bottom: 0;
+      line-height: 1.25;
+    }
+    h4 {
+      position: relative;
+      z-index: 99;
+      font-weight: 400;
+    }
+    .more {
+      position: absolute;
+      bottom: 2.5rem;
+      right: 2.5rem;
+      width: 4rem;
+      height: 4rem;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 50%;
+      z-index: 99;
+      transition: all 300ms;
+    }
+    .more img {
+      width: 4rem;
+      height: 4rem;
+    }
+    .image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      img {
+        object-fit: cover;
+        object-position: 50% 50%;
+        width: 100%;
+        height: 100%;
+        transition: all 500ms;
+      }
+    }
+  }
+}
+.main-contact {
+  display: block;
+  .contact-visual {
+    width: 100%;
+    height: 600px;
+    background-image: url("../images/big-cleaner.jpg");
+  }
+}
+
+.main-join {
+  .container {
+    width: 100%;
+    position: relative;
+
+    .join-contents {
+      width: 60%;
+      margin: 0px auto;
+      text-align: center;
+    }
+    .join-video {
+      top: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      .join-visual {
+        width: 100%;
         position: absolute;
-        top: 2.5em;
-        margin: 0px auto;
-        font-size:4em;
-        color:#fff
-    }
-    &:before{
+      }
+      &:before {
+        content: "";
+        position: absolute;
         display: block;
-        background: rgba(0,0,0,0.3);
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        background: linear-gradient(
+          to top,
+          #000000 40%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+    }
+    @media screen and (max-aspect-ratio: 1920/820) {
+      .join-visual {
+        width: auto;
+        height: 100vh;
+      }
+    }
+  }
+}
+
+.main-news {
+  height: 600px;
+  .container {
+    height: 100%;
+
+    .thumnail-news {
+      position: relative;
+      .channel {
         position: absolute;
-        top: 0;
-        left: 0;
+        left: 1rem;
+        top: 1rem;
+        display: inline-block;
+        background: #f36335;
+        color: #fff;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.2rem;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        /* position을 적용시키면 inline도 상하로 padding을 적용할 수 있다. */
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 1.5rem;
+        border-radius: 0.75rem;
+      }
     }
+  }
 }
-.main-intro{
-    display: block;
-    .col-lg-12{
-        width: 100%;
-        position: relative;
-    }
-    .intro-visual{
-        width: 100%;
-        height: 600px;
-        background-image: url("../images/Cleaners_TD2.png");
-    }
+
+.swiper {
+  width: 100%;
+  height: 100%;
 }
-.main-contact{
-    display: block;
-    .col-lg-12{
-        width: 100%;
-        position: relative;
-    }
-    .contact-visual{
-        width: 100%;
-        height: 600px;
-        background-image: url("../images/big-cleaner.jpg");
-    }
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

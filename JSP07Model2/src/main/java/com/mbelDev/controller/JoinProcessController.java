@@ -32,7 +32,7 @@ public class JoinProcessController extends HttpServlet {
 		String userAD01 = request.getParameter("userAD01");
 		String userAD02 = request.getParameter("userAD02");
 		String userAD03 = request.getParameter("userAD03");
-		String Address = userAD01 + userAD02 + userAD03; 
+		String Address = userAD01 +"/"+ userAD02 +"/"+ userAD03; 
 		
 		MemberDto memberDto = new MemberDto();
 		memberDto.setUserID(userID);

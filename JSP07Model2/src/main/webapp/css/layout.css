@@ -37,6 +37,7 @@
 .header .header-left {
   position: absolute;
   left: 2em;
+  top: 0px;
   color: #fff;
 }
 .header .header-left__logo {
@@ -94,7 +95,7 @@
 
 .main {
   position: relative;
-  top: 60px;
+  margin-top: 65px;
 }
 
 .footer {
@@ -102,7 +103,7 @@
   position: relative;
   z-index: 5;
   border-top: 1px solid #eee;
-  background: #fff;
+  background: #111;
 }
 .footer__inner {
   position: relative;
@@ -170,7 +171,7 @@
   position: absolute;
   top: -9px;
   left: 0;
-  background: url(../img/icon_isms.png) no-repeat center/50px 50px;
+  background: url(../img/icon_isms.png) no-repeat center/120px 60px;
   content: "";
 }
 
@@ -178,6 +179,46 @@
   display: block;
   width: 1200px;
   height: 800px;
+}
+
+.col-lg-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.col-lg-4 {
+  flex: 0 0 auto;
+  width: 33.333%;
+}
+
+.col-lg-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.col-lg-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > * {
+  max-width: 100%;
+  padding: 0.5rem;
+}
+
+.title-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
 }
 
 a {

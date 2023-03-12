@@ -98,6 +98,25 @@ public class MemberDao {
 		}
 		return memberDto;
 	}
+	
+	public int checkID(String userID) {
+		int checkDuple = 0;
+		getConnection();
+		String sql = "SELECT COUNT(*) AS COUNT FROM MEMBER02 WHERE USERID = ?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, userID);
+			result = psmt.executeQuery();
+			if(result.next()) {
+				checkDuple = result.getInt("COUNT");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return checkDuple;
+	}
 
 	
 	public void close() {

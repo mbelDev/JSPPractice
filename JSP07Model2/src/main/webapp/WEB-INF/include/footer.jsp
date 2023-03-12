@@ -1,33 +1,32 @@
-	<footer class="footer">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+ 	<footer class="footer">
 		<div class="footer__inner">
 			<div class="footer__inner__area-info">
-			  <h1>danal</h1>
+			  <h1>CLEANERS</h1>
 			  <ul>
-				<li><a href="">개인정보처리방침</a></li>
-				<li><a href="">이메일무단수집거부</a></li>
-				<li><a href="">내부정보관리규정</a></li>
-				<li><a href="">사이트맵</a></li>
+				<li><a href="">ê°ì¸ì ë³´ì²ë¦¬ë°©ì¹¨</a></li>
+				<li><a href="">ì´ë©ì¼ë¬´ë¨ìì§ê±°ë¶</a></li>
+				<li><a href="">ë´ë¶ì ë³´ê´ë¦¬ê·ì </a></li>
+				<li><a href="">ì¬ì´í¸ë§µ</a></li>
 			  </ul>
 			  <div class="footer__inner__family-site">
 				<select class="family-site">
-				  <option value="">다날페이</option>
-				  <option value="">다날엔터테인먼트</option>
-				  <option value="">다날에프엔비</option>
-				  <option value="">비트코퍼레이션</option>
-				  <option value="">다날핀테크</option>
-				  <option value="">다날재팬</option>
-				  <option value="">플렉스페이</option>
-				  <option value="">페이프로토콜</option>
+				  <option value="">JTF</option>
+				  <option value="">OUTCAST</option>
+				  <option value="">JOE PAGE</option>
+				  <option value="">HOUSE CLEANING WITH FLAME</option>
+				  <option value="">NEW YORK CITY</option>
 				</select>
 			  </div>
 			</div>
 			<div class="footer__inner__area-location">
 			  <p>
-				경기도 성남시 분당구 분당로 55 서현동 퍼스트타워 9층 (주)다날 (13591) <br />
+				561 W 179th St #2, New York, NY 10033, United States <br />
 				Copyright 2013 by Danal Co., Ltd. All Rights Reserved.
 			  </p>
 			  <span
-				>[인증범위] 통합 결제 플랫폼 및 본인확인 서비스<br />[유효기간] 2021.04.21 -
+				>[ì¸ì¦ë²ì] íµí© ê²°ì  íë«í¼ ë° ë³¸ì¸íì¸ ìë¹ì¤<br />[ì í¨ê¸°ê°] 2021.04.21 -
 				2024.04.20</span
 			  >
 			</div>

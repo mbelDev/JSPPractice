@@ -16,6 +16,7 @@ public class LoginController extends HttpServlet{
 
 	public LoginController() {
 		super();
+		System.out.println("일단 실행은 됨");
 	}
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
