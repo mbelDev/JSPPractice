@@ -31,7 +31,7 @@ public class MemberDao {
 	public int insertMember(MemberDto memberDto) {
 		int result = 0;
 		getConnection();
-		String sql = "INSERT INTO MEMBER02 VALUES(MEMBER02_SEQ.NEXTVAL,?,?,?,?,?,?,?,SYSDATE)";
+		String sql = "INSERT INTO MEMBER02 VALUES(MEMBER02_SEQ.NEXTVAL,?,?,?,?,?,?,?,SYSDATE,?,?)";
 		try {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, memberDto.getUserID());
@@ -41,6 +41,8 @@ public class MemberDao {
 			psmt.setString(5, memberDto.getUserHP());
 			psmt.setInt(6, memberDto.getUserZIP());
 			psmt.setString(7, memberDto.getUserAD());
+			psmt.setString(8, memberDto.getUserIcon());
+			psmt.setString(9, memberDto.getUserIconReal());
 
 			result = psmt.executeUpdate();
 
@@ -68,6 +70,8 @@ public class MemberDao {
 				memberDto.setUserHP(result.getString("userHP"));
 				memberDto.setUserZIP(result.getInt("userZIP"));
 				memberDto.setUserAD(result.getString("userAD"));
+				memberDto.setUserIcon(result.getString("userICON"));
+				memberDto.setUserIconReal(result.getString("userICONREAL"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
