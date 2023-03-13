@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/member.css">
+</head>
+<body>
+    <main class="main">
+        <div class="container center">
+            <div class="info__title">
+                <h1 class="info__title-txt">형제님의 정보를 최신화 합니다!!</h1>
+            </div>
+            <form action="./infoProcess" method="POST">
+                <div class="info__contents-table">
+                    <div class="item">
+                        <span class="info-txt">아이디</span>
+                        <div class="item-group">
+                            <input type="text" class="info-input info-id">
+                            <button class="btn idCheck">중복확인</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="info-txt">비밀번호</span>
+                        <input type="password" class="info-input info-pw">
+                    </div>
+                    <div class="item">
+                        <span class="info-txt">비밀번호 확인</span>
+                        <input type="password" class="info-input info-pw-confirm">
+                    </div>
+                    <div class="item">
+                        <span class="info-txt">이름</span>
+                        <input type="text" class="info-input info-nm">
+                    </div>
+                    <div class="item">
+                        <span class="info-txt">생년월일</span>
+                        <input type="text" class="info-input info-bd">
+                    </div>
+                    <div class="item">
+                        <span class="info-txt">연락처</span>
+                        <input type="text" class="info-input info-hp">
+                    </div>
+                    <div class="item">
+                        <span class="info-txt">이메일</span>
+                        <input type="text" class="info-input info-em">
+                    </div>
+                    <div class="item">
+                        <span class="info-txt">주소</span>
+                        <div class="item-group">
+                            <input type="text" class="info-input info-zip">
+                            <button class="btn zip">검색</button>
+                        </div>
+                        <input type="text" class="info-input info-add add01">
+                        <input type="text" class="info-input info-add add02">
+                        <input type="text" class="info-input info-add add03">
+                    </div>
+
+                </div>
+                <div class="info__contents-btns">
+                    <button class="btn confirm">회원정보 수정</button>
+                    <button class="btn exit">회원탈퇴</button>
+                    <button class="btn return">취소</button>
+                </div>
+            </form>
+        </div>
+    
+    </main>
+</body>
+</html>
