@@ -3,84 +3,70 @@
     pageEncoding="UTF-8"%>
     
 <%@include file = "../include/header.jsp" %>
+<link rel="stylesheet" href="../css/member.css">
 <%@include file="../include/gnb.jsp" %>
 
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
-
-	<main class="main">
-		<div class="container center">
-			<form action="./joinProcess" method="POST">
-				<table>
-					<colgroup>
-						<col style="width: 20%">
-						<col style="width: 80%">
-					</colgroup>
-					<tbody>
-						<tr>
-							<th>아이디</th>
-							<td><input type="text" name="userID" id="userID"
-								placeholder="아이디를 입력 해 주세요.">
-								<button class="btn idChecker">아이디 중복 확인</button>
-								</td>
-			
-						</tr>
-						<tr>
-							<th>비밀번호</th>
-							<td><input type="password" name="userPW" id="userPW"
-								placeholder="비밀번호를 입력 해 주세요."></td>
-						</tr>
-						<tr>
-							<th>비밀번호 확인</th>
-							<td><input type="password" name="userPWconfirm"
-								id="userPWconfirm" placeholder="비밀번호를 한번 더 입력 해 주세요."></td>
-						</tr>
-						<tr>
-							<th>이름</th>
-							<td><input type="text" name="userNM" id="userNM"
-								placeholder="이름을 입력 해 주세요."></td>
-						</tr>
-						<tr>
-							<th>메일</th>
-							<td><input type="text" name="userEM" id="userEM"
-								placeholder="메일 주소를 입력 해 주세요."></td>
-						</tr>
-						<tr>
-							<th>연락처</th>
-							<td><input type="text" name="userHP" id="userHP"
-								placeholder="전화번호를 입력 해 주세요."></td>
-						</tr>
-						<tr>
-							<th>주소</th>
-							<td>
-								<div>
-									<input type="text" name="userZIP" id="userZIP"
-										placeholder="주소를 입력 해 주세요." readonly>
-									<button class="btn ZIPCODE">우편번호</button>
-								</div>
-								<div>
-									<input type="text" name="userAD01" id="userAD01"
-										placeholder="주소를 입력 해 주세요." readonly> <span>기본주소</span>
-								</div>
-								<div>
-									<input type="text" name="userAD02" id="userAD02"
-										placeholder="주소를 입력 해 주세요.">
-									<input type="text" name="userAD03" id="userAD03"
-										placeholder="참고사항.">
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<div>
-					<button class="btn confirm">회원가입</button>
-					<button type="reset">취소</button>
-				</div>
-			</form>
+<main class="main">
+	<div class="container center">
+		<div class="info__title">
+			<h1 class="info__title-txt">CLEANER와 함께 하십시오! 뉴욕은 거친 땅입니다!</h1>
 		</div>
+		<form action="./infoProcess" method="POST">
+			<div class="info__contents-table">
+				<div class="item">
+					<span class="info-txt">아이디</span>
+					<div class="item-group">
+						<input type="text" class="info-input info-id" name="userID" placeholder="아이디를 입력 해 주세요.">
+						<button class="btn idChecker">중복확인</button>
+					</div>
+				</div>
+				<div class="item">
+					<span class="info-txt">비밀번호</span>
+					<input type="password" class="info-input info-pw" name="userPW" placeholder="비밀번호를 입력 해 주세요.">
+				</div>
+				<div class="item">
+					<span class="info-txt">비밀번호 확인</span>
+					<input type="password" class="info-input info-pw-confirm" name="userPWconfirm" placeholder="비밀번호를 한번 더 입력 해 주세요.">
+				</div>
+				<div class="item">
+					<span class="info-txt">이름</span>
+					<input type="text" class="info-input info-nm" name="userNM" placeholder="이름을 입력 해 주세요.">
+				</div>
+				<div class="item">
+					<span class="info-txt">생년월일</span>
+					<input type="text" class="info-input info-bd" name="userBD" placeholder="생년월일을 입력 해 주세요. ex 1992-05-14">
+				</div>
+				<div class="item">
+					<span class="info-txt">연락처</span>
+					<input type="text" class="info-input info-hp" name="userHP" placeholder="연락처를 입력 해 주세요.">
+				</div>
+				<div class="item">
+					<span class="info-txt">이메일</span>
+					<input type="text" class="info-input info-em" name="userEM" placeholder="이메일을 입력 해 주세요.">
+				</div>
+				<div class="item">
+					<span class="info-txt">주소</span>
+					<div class="item-group">
+						<input type="text" class="info-input info-zip" placeholder="주소를 입력 해 주세요." readonly name="userZIP">
+						<button class="btn ZIPCODE">검색</button>
+					</div>
+					<input type="text" class="info-input info-add add01" placeholder="주소를 입력 해 주세요." readonly name="userAD01">
+					<input type="text" class="info-input info-add add02" name="userAD02">
+					<input type="text" class="info-input info-add add03" name="userAD03">
+				</div>
+
+			</div>
+			<div class="info__contents-btns">
+				<button class="btn confirm">회원가입</button>
+				<button type="reset">취소</button>
+			</div>
+		</form>
+	</div>
 
 	</main>
-
+	
 	<script>
 	//jQuery alias  $
 		// const userID = document.querySelector("#userID")
@@ -122,17 +108,17 @@
                         extraAddr = ' (' + extraAddr + ')';
                     }
                     // 조합된 참고항목을 해당 필드에 넣는다.
-                    $("#userAD03").val(extraAddr);
+                    $(".add03").val(extraAddr);
                 
                 } else {
-                    $("#userAD03").val("");
+                    $(".add03").val("");
                 }
 
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
-                $("#userZIP").val(data.zonecode);
-                $("#userAD01").val(addr);
+                $(".info-zip").val(data.zonecode);
+                $(".add01").val(addr);
                 // 커서를 상세주소 필드로 이동한다.
-                $("#userAD02").focus();
+                $(".add02").focus();
             }
         }).open();
         return false;
@@ -140,35 +126,48 @@
 
         
         $(".idChecker").on("click",()=>{
-        	const checkID = $("#userID").val();
+        	const checkID = $(".info-id").val();
+        	if (checkID != ""){
         		$.ajax({
-        			url:"idChecker.jsp",
+        			url:"idCheck",
         			data:{userID : checkID},
         			success:function(response){
-        				console.log(response);
+        				if(parseInt(response.count) === 0){
+        					alert("사용하실 수 있는 아이디 입니다");
+        					$(".info-id").attr("readonly",true);
+        				}else{
+        					alert("사용하실 수 없는 아이디 입니다.");
+        					$(".info-id").val("");
+        					$(".info-id").focus();
+        				}
+        				//Gson을 이용해 Json으로 받은 파일을 처리.
         			},
         			fail:function(error){
         				console.log(error);
         			}
         		});
+        	}else{
+        		alert("아이디를 입력 해 주세요!");
+        		$(".info-id").focus();
+        	}
         	return false;
         });
         
         $(".confirm").on("click", function() {
             console.log("QUERY!!!");
-			if ($("#userID").val() === "") {
+			if ($(".info-id").val() === "") {
 				alert("아이디를 입력 해 주세요.");
-                $('userID').focus();
+                $('info-id').focus();
 				return false;
 			}else
-			if ($("#userPW").val() === "") {
+			if ($(".info-pw").val() === "") {
 				alert("비밀번호를 입력 해 주세요.");
-                $('userPW').focus();
+                $('info-pw').focus();
 				return false;
 			}else
-			if ($("#userPWconfirm").val() !== $("#userPW").val()) {
+			if ($(".info-pw-confirm").val() !== $(".info-pw").val()) {
 				alert("비밀번호가 일치하지 않습니다.");
-                $('userPWconfirm').focus();
+                $('info-pw-confirm').focus();
 				return false;
 			}
 		});       

@@ -105,8 +105,8 @@ try {
 							</div>
 							<div>
 								<input type="text" name="userAD02" id="userAD02"
-									placeholder="주소를 입력 해 주세요."> <input type="text"
-									name="userAD03" id="userAD03" placeholder="참고사항.">
+									placeholder="주소를 입력 해 주세요."> 
+								<input type="text" name="userAD03" id="userAD03" placeholder="참고사항.">
 							</div>
 						</td>
 					</tr>
