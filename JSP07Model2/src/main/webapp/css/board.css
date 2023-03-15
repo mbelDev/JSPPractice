@@ -8,23 +8,26 @@
   margin: 0px auto;
 }
 
+.board__list {
+  width: 100%;
+  height: 50px;
+}
 .board__list span {
   display: inline-block;
 }
-.board__list-no {
+.board__list-item-postNo {
   width: 30px;
 }
-.board__list-title {
+.board__list-item-postTitle {
   width: 180px;
   text-overflow: ellipsis;
 }
-.board__list-author {
+.board__list-item-postAuth {
   width: 80px;
 }
-.board__list-date {
+.board__list-item-postDate {
   width: 160px;
 }
-
 .post {
   text-align: left;
 }

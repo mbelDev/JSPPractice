@@ -1,12 +1,9 @@
-<%@page import="com.mbelDev.utils.CookieManager"%> <%@ page language="java"
-contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@include file =
-"../include/header.jsp" %> <%@include file="../include/gnb.jsp" %>
+<%@page import="com.mbelDev.utils.CookieManager"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>  
+<%@include file ="../include/header.jsp" %> 
+<link rel="stylesheet" href="../css/member.css">
+<%@include file="../include/gnb.jsp" %>
 <main class="main">
-  <% String rememberID = ""; String temp = "null"; Cookie[] cookies =
-  request.getCookies(); if (cookies != null) { for (Cookie item : cookies) { if
-  (item.getName().equals("rememberIDCookie")) { rememberID = item.getValue();
-  temp = CookieManager.readCookie(request, "rememberIDCookie"); } } }
-  out.println("temp"+temp); %>
   <section class="login">
     <div class="container center">
       <div class="login__title">
@@ -14,41 +11,34 @@ contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@include file =
       </div>
       <div class="login__table">
         <form action="./loginProcess" method="POST">
-          <table>
-            <colgroup>
-              <col style="width: 20%" />
-              <col style="width: 80%" />
-            </colgroup>
-            <tbody>
-              <tr>
-                <th>아이디</th>
-                <td>
+          <div class="login__contents-table">
+              <div class="item">
+                <span class="login-txt">아이디</span>
+
                   <input
                     type="text"
+                    class="login-input login-id"
                     name="userID"
                     id="userID"
-                    value="<%=rememberID %>"
+                    value=""
                     placeholder="아이디를 입력해 주세요"
                   />
-                </td>
-              </tr>
-              <tr>
-                <th>비밀번호</th>
-                <td>
-                  <input
-                    type="password"
-                    name="userPW"
-                    id="userPW"
-                    placeholder="비밀번호를 입력 해 주세요."
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+              </div>
+              <div class="item">
+                <span class="login-txt">비밀번호</span>
+                <input
+                  type="password"
+                  class="login-input login-pw"
+                  name="userPW"
+                  id="userPW"
+                  placeholder="비밀번호를 입력 해 주세요."
+                />
+              </div>
+            </div>
           <div>
             <button class="btn confirm">로그인</button>
             <button class="btn join">
-              <a href="../member/join">회원가입</a>
+              <a href="./join">회원가입</a>
             </button>
             <input type="checkbox" name="rememberID" value="yes" /><span
               >아이디 기억하기</span

@@ -1,18 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-<link rel="stylesheet" href="./css/layout.css" />
-<link rel="stylesheet" href="./css/main.css" />
-<link rel="stylesheet" href="./css/fullpage.css" />
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@include file = "../include/header.jsp" %>
+<link rel="stylesheet" href="../css/main.css" />
+<link rel="stylesheet" href="../css/fullpage.css" />
 
-<script src="./js/fullpage.extensions.min.js"></script>
-</head>
-<body>
+<script src="../js/fullpage.extensions.min.js"></script>
+<%@include file="../include/gnb.jsp" %>
+
 	<h1>title</h1>
 	<span>${fileList }</span>
 	<div id="main" class="">
