@@ -27,7 +27,7 @@ public class MemberDao {
 		}
 	}
 
-	// CRUD작성
+	// CRUD�옉�꽦
 	public int insertMember(MemberDto memberDto) {
 		int result = 0;
 		getConnection();
@@ -41,6 +41,8 @@ public class MemberDao {
 			psmt.setString(5, memberDto.getUserHP());
 			psmt.setInt(6, memberDto.getUserZIP());
 			psmt.setString(7, memberDto.getUserAD());
+			psmt.setString(8, memberDto.getUserIcon());
+			psmt.setString(9, memberDto.getUserIconReal());
 
 			result = psmt.executeUpdate();
 
@@ -50,7 +52,7 @@ public class MemberDao {
 			close();
 		}
 
-		return 1;
+		return result;
 	}
 
 	public MemberDto getMemberInfo(String userID) {
@@ -61,13 +63,20 @@ public class MemberDao {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, userID);
 			result = psmt.executeQuery();
-			if(result.next()) {
+			if (result.next()) {
 				memberDto.setUserID(result.getString("userID"));
 				memberDto.setUserNM(result.getString("userNM"));
 				memberDto.setUserEM(result.getString("userEM"));
 				memberDto.setUserHP(result.getString("userHP"));
 				memberDto.setUserZIP(result.getInt("userZIP"));
 				memberDto.setUserAD(result.getString("userAD"));
+				memberDto.setUserIcon(result.getString("userIcon"));
+				if (result.getString("userIconReal") != null) {
+					memberDto.setUserIconReal(result.getString("userIconReal"));
+				} else {
+					memberDto.setUserIconReal("gundam.jpg");
+				}
+
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -75,6 +84,32 @@ public class MemberDao {
 			close();
 		}
 		return memberDto;
+	}
+
+	public int updateMember(MemberDto memberDto) {
+		int result = 0;
+		getConnection();
+		String sql = "UPDATE MEMBER02 SET userPW = ?, userNM = ?, userEM = ?, userHP = ?, userZIP = ?, userAD = ?, userIcon = ?, userIconReal = ? WHERE USERID = ?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, memberDto.getUserPW());
+			psmt.setString(2, memberDto.getUserNM());
+			psmt.setString(3, memberDto.getUserEM());
+			psmt.setString(4, memberDto.getUserHP());
+			psmt.setInt(5, memberDto.getUserZIP());
+			psmt.setString(6, memberDto.getUserAD());
+			psmt.setString(7, memberDto.getUserIcon());
+			psmt.setString(8, memberDto.getUserIconReal());
+			psmt.setString(9, memberDto.getUserID());
+
+			result = psmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return result;
 	}
 
 	public MemberDto getLoggedMemberInfo(String userID, String userPW) {
@@ -86,7 +121,7 @@ public class MemberDao {
 			psmt.setString(1, userID);
 			psmt.setString(2, userPW);
 			result = psmt.executeQuery();
-			if(result.next()) {
+			if (result.next()) {
 				memberDto = new MemberDto();
 				memberDto.setUserID(result.getString("userID"));
 				memberDto.setUserNM(result.getString("userNM"));
@@ -98,7 +133,7 @@ public class MemberDao {
 		}
 		return memberDto;
 	}
-	
+
 	public int checkID(String userID) {
 		int checkDuple = 0;
 		getConnection();
@@ -107,7 +142,7 @@ public class MemberDao {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, userID);
 			result = psmt.executeQuery();
-			if(result.next()) {
+			if (result.next()) {
 				checkDuple = result.getInt("COUNT");
 			}
 		} catch (Exception e) {
@@ -118,7 +153,6 @@ public class MemberDao {
 		return checkDuple;
 	}
 
-	
 	public void close() {
 		try {
 			if (result != null)
@@ -127,7 +161,7 @@ public class MemberDao {
 				psmt.close();
 			if (conn != null)
 				conn.close();
-		}catch(SQLException e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}

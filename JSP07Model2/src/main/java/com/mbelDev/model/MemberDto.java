@@ -10,6 +10,10 @@ public class MemberDto {
 	private int userZIP;
 	private String userAD;
 	private String date;
+	private String userIcon;
+	private String userIconReal;
+
+	
 	public int getNo() {
 		return no;
 	}
@@ -64,8 +68,20 @@ public class MemberDto {
 	public void setDate(String date) {
 		this.date = date;
 	}
+	public String getUserIcon() {
+		return userIcon;
+	}
+	public void setUserIcon(String userIcon) {
+		this.userIcon = userIcon;
+	}
+	public String getUserIconReal() {
+		return userIconReal;
+	}
+	public void setUserIconReal(String userIconReal) {
+		this.userIconReal = userIconReal;
+	}
 	public MemberDto(int no, String userID, String userPW, String userNM, String userEM, String userHP, int userZIP,
-			String userAD, String date) {
+			String userAD, String date, String userIcon, String userIconReal) {
 		super();
 		this.no = no;
 		this.userID = userID;
@@ -76,6 +92,8 @@ public class MemberDto {
 		this.userZIP = userZIP;
 		this.userAD = userAD;
 		this.date = date;
+		this.userIcon = userIcon;
+		this.userIconReal = userIconReal;
 	}
 	public MemberDto() {
 		super();
@@ -84,8 +102,7 @@ public class MemberDto {
 	public String toString() {
 		return "MemberDto [no=" + no + ", userID=" + userID + ", userPW=" + userPW + ", userNM=" + userNM + ", userEM="
 				+ userEM + ", userHP=" + userHP + ", userZIP=" + userZIP + ", userAD=" + userAD + ", date=" + date
-				+ "]";
+				+ ", userIcon=" + userIcon + ", userIconReal=" + userIconReal + "]";
 	}
-	
 	
 }
