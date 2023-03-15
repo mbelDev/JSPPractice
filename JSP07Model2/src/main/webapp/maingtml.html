@@ -354,6 +354,32 @@
       <!--                                main-news                                           -->
     </main>
 
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script>
+      const swiperVisual = new Swiper(".visualSwiper", {
+        loop: true,
+        pagination: {
+          el: ".pagination-visual",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script>
+      var swiperNews = new Swiper(".newsSwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        freeMode: true,
+        pagination: {
+          el: ".pagination-news",
+          clickable: true,
+        },
+      });
+    </script>
+
     <footer class="footer">
       <div class="footer__inner">
         <div class="footer__inner__area-info">
@@ -386,30 +412,6 @@
         </div>
       </div>
     </footer>
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script>
-      const swiperVisual = new Swiper(".visualSwiper", {
-        loop: true,
-        pagination: {
-          el: ".pagination-visual",
-          type: "fraction",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
-    <script>
-      var swiperNews = new Swiper(".newsSwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        freeMode: true,
-        pagination: {
-          el: ".pagination-news",
-          clickable: true,
-        },
-      });
-    </script>
+
   </body>
 </html>

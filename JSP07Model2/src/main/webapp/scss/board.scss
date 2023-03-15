@@ -9,22 +9,33 @@
 
 .board{
     &__list{
+        width: 100%;
+        height: 50px;
         span{
             display: inline-block
         }
-        &-no{
-            width:30px;
+        &-item{
+
+            &-postNo{
+                width:30px;
+            }
+            &-postTitle{
+                width:180px;
+                text-overflow: ellipsis;
+            }
+            &-postAuth{
+                width:80px;
+            }
+            &-postDate{
+                width:160px;
+            }
         }
-        &-title{
-            width:180px;
-            text-overflow: ellipsis;
-        }
-        &-author{
-            width:80px;
-        }
-        &-date{
-            width:160px;
-        }
+    }
+    &__write{
+
+    }
+    &__view{
+
     }
 }
 

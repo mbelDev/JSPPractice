@@ -1,0 +1,72 @@
+.container{
+    display: block;
+    width:1200px;
+    margin:0px auto;
+}
+.center{
+    margin: 0px auto;
+}
+
+.board{
+    width: 1200px;
+    margin: 100px auto;
+    th,td{
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+    textarea{
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #ccc;
+        resize: none;
+        overflow-y: auto;
+    }
+    input[type="text"]{
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+    .form{
+        .btns{
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            button{
+                min-width: 120px;
+                padding: 20px 0px;
+                margin: 0px 5px;
+                display: flex;
+                border-radius: 5px;
+                border: none;
+                &.confirm{
+                    background: #0df;
+                }
+                &.reset{
+                    background: #333;
+                }
+            }
+        }
+    }
+    &__list{
+        span{
+            display: inline-block
+        }
+        &-no{
+            width:30px;
+        }
+        &-title{
+            width:180px;
+            text-overflow: ellipsis;
+        }
+        &-author{
+            width:80px;
+        }
+        &-date{
+            width:160px;
+        }
+    }
+}
+
+.post{
+    text-align: left;
+}
