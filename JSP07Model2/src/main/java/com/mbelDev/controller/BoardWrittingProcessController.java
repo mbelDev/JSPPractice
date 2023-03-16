@@ -21,6 +21,7 @@ public class BoardWrittingProcessController extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
+		System.out.println("실행은 됨");
 		String author = request.getParameter("postAuth");
 		String postPW = request.getParameter("postPW");
 		String category = request.getParameter("postCTGR");
@@ -32,13 +33,14 @@ public class BoardWrittingProcessController extends HttpServlet {
 		boardDto.setPostCTGR(category);
 		boardDto.setPostTitle(title);
 		boardDto.setPostCont(contents);
+		System.out.println(boardDto.toString());
 		BoardDao boardDao = new BoardDao();
 		int result = boardDao.insertBoard(boardDto);
-		if (result>0) {
-			ScriptWriter.alert(response, "글 작성이 완료되었습니다.", "./list");
-		}else {
-			ScriptWriter.alert(response, "글 작성에 실패하였습니다.", "back");
-		}
+//		if (result>0) {
+//			ScriptWriter.alert(response, "글 작성이 완료되었습니다.", "./list");
+//		}else {
+//			ScriptWriter.alert(response, "글 작성에 실패하였습니다.", "back");
+//		}
 	}
 
 }

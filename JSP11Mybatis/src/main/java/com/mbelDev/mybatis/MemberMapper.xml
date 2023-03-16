@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mbelDev.mybatis">
+  <select id="getMemberAll" resultType="MemberDto">
+    select * from BOARD_TEST ORDER BY NO 
+  </select>
+  <select id="getMemberOne" parameterType="String" resultType="MemberDto">
+	  select * from BOARD_TEST WHERE userID = #{userID}
+  </select>
+  <!-- insert, delete, update는 result값이 없다 -->
+  <insert id="insertMember" parameterType="MemberDto">
+	  INSERT INTO MEMBER02 VALUES(MEMBER02_SEQ.NEXTVAL,
+	  								#{userID},
+	  								#{userPW},
+	  								#{userNM},
+	  								#{userEM},
+	  								#{userHP},
+	  								#{userZIP},
+	  								#{userAD},
+	  								SYSDATE,
+	  								#{userIcon},
+	  								#{userIconReal}
+	  								)
+  </insert>
+  <delete id="withdrawMember" parameterType="String">
+	  DELETE FROM MEMBER02 WHERE USERID = #{userID}
+  </delete>
+</mapper>

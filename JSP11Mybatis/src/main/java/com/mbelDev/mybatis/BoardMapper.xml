@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mbelDev.mybatis">
+  <select id="getSelectAll" resultType="BoardDto">
+    select * from BOARD_TEST ORDER BY POSTNO 
+  </select>
+  <select id="getSelectOne" parameterType="Integer" resultType="BoardDto">
+	  select * from BOARD_TEST WHERE POSTNO = #{POSTNO}
+  </select>
+  <!-- insert, delete, update는 result값이 없다 -->
+  <insert id="insertBoard" parameterType="BoardDto">
+	  INSERT INTO BOARD_TEST VALUES(BOARD_TEST_SEQ.NEXTVAL,#{author},#{contents},SYSDATE)
+  </insert>
+</mapper>

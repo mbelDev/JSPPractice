@@ -23,7 +23,7 @@ public class BoardListController extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		BoardDao boardDao = new BoardDao();
-		ArrayList<BoardDto> boardList = boardDao.getAll();
+		ArrayList<BoardDto> boardList = (ArrayList<BoardDto>)boardDao.getAll();
 		request.setAttribute("boardList",boardList);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/board/list.jsp");
 		dispatcher.forward(request, response);
