@@ -6,6 +6,16 @@
   <select id="getSelectAll" resultType="BoardDto">
     select * from BOARD_CLEANER ORDER BY POSTNO 
   </select>
+  <select id="getTotalPost" resultType="Integer">
+	  SELECT COUNT(*) AS TOTAL FROM BOARD_CLEANER
+  </select>
+	<select id="getBoardPage" resultType="BoardDto" 
+	parameterType="HashMap">
+		SELECT * FROM
+		    (SELECT ROWNUM AS NUM,B.* FROM
+		        (SELECT * FROM BOARD_CLEANER ORDER BY POSTNO DESC) B
+		    ) WHERE NUM <![CDATA[>=]]> #{start} AND NUM <![CDATA[<=]]> #{end}
+	</select>
   <select id="getSelectOne" parameterType="Integer" resultType="BoardDto">
 	  select * from BOARD_CLEANER WHERE POSTNO = #{postNO}
   </select>
