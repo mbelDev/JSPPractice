@@ -25,6 +25,7 @@ public class BoardViewController extends HttpServlet {
 		
 		BoardDao boardDao = new BoardDao();
 		BoardDto boardDto = boardDao.getSelectOne(postNo);
+		System.out.println(boardDto.toString());
 		request.setAttribute("boardDto", boardDto);
 		RequestDispatcher dispatcher = 
 				request.getRequestDispatcher("/WEB-INF/board/view.jsp");
