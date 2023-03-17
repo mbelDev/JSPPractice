@@ -36,11 +36,11 @@ public class BoardWrittingProcessController extends HttpServlet {
 		System.out.println(boardDto.toString());
 		BoardDao boardDao = new BoardDao();
 		int result = boardDao.insertBoard(boardDto);
-//		if (result>0) {
-//			ScriptWriter.alert(response, "글 작성이 완료되었습니다.", "./list");
-//		}else {
-//			ScriptWriter.alert(response, "글 작성에 실패하였습니다.", "back");
-//		}
+		if (result>0) {
+			ScriptWriter.alert(response, "글 작성이 완료되었습니다.", "./list");
+		}else {
+			ScriptWriter.alert(response, "글 작성에 실패하였습니다.", "back");
+		}
 	}
 
 }
