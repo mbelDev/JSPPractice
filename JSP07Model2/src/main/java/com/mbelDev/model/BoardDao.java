@@ -42,6 +42,7 @@ public class BoardDao {
 		List<BoardDto> boardList = null;
 		
 		SqlSession sqlSession = MybatisConnectionFactory.getSqlSession();
+		System.out.println(sqlSession);
 		boardList = sqlSession.selectList("getSelectAll");
 		sqlSession.close();
 		return boardList;

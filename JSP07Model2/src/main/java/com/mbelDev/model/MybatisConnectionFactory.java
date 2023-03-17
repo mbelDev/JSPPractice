@@ -9,18 +9,18 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class MybatisConnectionFactory {
-	private static SqlSessionFactory sqlSessionFactory;
+	private static SqlSessionFactory testSessionFactory;
 	static {
 		try {
 			String resource = "com/mbelDev/mybatis/config.xml";
 			InputStream inputStream;
 			inputStream = Resources.getResourceAsStream(resource);
-			sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+			testSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 	public static SqlSession getSqlSession() {
-		return sqlSessionFactory.openSession();
+		return testSessionFactory.openSession();
 	}
 }

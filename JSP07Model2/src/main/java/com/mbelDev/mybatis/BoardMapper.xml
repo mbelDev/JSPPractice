@@ -14,7 +14,7 @@
   </select>
   <!-- insert, delete, update는 result값이 없다 -->
   <insert id="insertBoard" parameterType="BoardDto">
-	  INSERT INTO BOARD_CLEANER VALUES(BOARD_CLEANER_SEQ.NEXTVAL,#{postAuth},#{postPW},${postCTGR},${postTitle},#{postCont},SYSDATE,0)
+	  INSERT INTO BOARD_CLEANER VALUES(BOARD_CLEANER_SEQ.NEXTVAL,#{postAuth},#{postPW},#{postCTGR},#{postTitle},#{postCont},SYSDATE,0)
   </insert>
   <delete id="deletePost" parameterType="Integer">
 	  DELETE FROM BOARD_CLEANER WHERE POSTNO = #{postNo}
